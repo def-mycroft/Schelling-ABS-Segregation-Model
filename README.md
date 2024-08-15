@@ -1,4 +1,5 @@
 
+A more in-depth explanation is available here: "[notebooks/Tutorial.ipynb](notebooks/Tutorial.ipynb)".
 
 The Schelling Segregation Model is a simple agent-based simulation that shows that small preferences for similarity cause self-organization into clusters.
 
@@ -13,5 +14,7 @@ This codebase implements a simple version of this model.  The model is instantia
 ...and an equilibrium is found through iteration: 
 
 ![Alt text](images/image-example-1.png)
+
+...[here](https://youtu.be/d4dFCsp6cfA) is a YouTube video which displays the process of finding equilibrium. 
 
 For more information, please view "[notebooks/Tutorial.ipynb](notebooks/Tutorial.ipynb)". 
