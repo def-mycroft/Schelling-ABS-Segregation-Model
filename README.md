@@ -14,4 +14,4 @@ This codebase implements a simple version of this model.  The model is instantia
 
 ![Alt text](images/image-example-1.png)
 
-For more information, please view "notebooks/Tutorial.ipynb". 
+For more information, please view "[notebooks/Tutorial.ipynb](notebooks/Tutorial.ipynb)". 
