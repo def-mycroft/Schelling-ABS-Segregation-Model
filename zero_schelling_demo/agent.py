@@ -3,22 +3,58 @@ from .imports import *
 
 
 class Agent:
-    """Represents an agent in a Schelling model simulation.
+    """Agent class
+
+    This class models an agent to be put on a grid in a Schelling
+    segregation simulation. The agent belongs to a specific group and
+    has a minimum threshold of similar neighbors required to be
+    satisfied or "happy". The agent can evaluate its neighbors,
+    determine its happiness, and decide on a new position if unhappy.
 
     Parameters
     ----------
+    min_like_neighbors_happy : int, optional
+        The minimum number of like neighbors required for the agent to
+        be happy (default is 1).
+    position : tuple of int, optional
+        The (x, y) coordinates of the agent's position on the grid
+        (default is (0, 0)).
+    group : int, optional
+        The agent's group identifier, typically 0 or 1 (default is 0).
+    id : str, optional
+        A unique identifier for the agent. If not provided, a UUID is 
+        generated automatically (default is None).
+
+    Attributes
+    ----------
     min_like_neighbors_happy : int
-        The minimum number of neighbors required to be happy. 
+        The minimum number of like neighbors required for the agent to
+        be happy.
+    group : int
+        The agent's group identifier.
     position : tuple of int
         The (x, y) coordinates of the agent's position on the grid.
-    group : int
-        Agent's group, either 0 or 1. 
+    is_happy : bool
+        Whether the agent is happy with its current neighbors.
+    id : str
+        The unique identifier for the agent.
+    n_similar_neighbors : int
+        The number of neighboring agents that belong to the same group.
+    neighbor_locs : list of tuple of int
+        The list of neighboring positions around the agent.
 
     Methods
     -------
-    method()
-        Placeholder for agent behavior or decision-making logic.
-
+    calculate_new_position(grid)
+        Determine the agent's new position on the grid if it is unhappy.
+    eval_neighbors(grid)
+        Evaluate the number of neighboring agents that belong to the 
+        same group.
+    get_locs(grid)
+        Retrieve the locations of neighboring slots around the agent's 
+        position.
+    __str__()
+        Return a string representation of the agent's attributes.
     """
     def __init__(self, min_like_neighbors_happy=1, position=(0,0), group=0, 
                  id=None):
